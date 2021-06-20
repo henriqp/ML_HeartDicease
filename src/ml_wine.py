@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import sys
 
-from sklearn.neighbors import KNeighborsClassifier
+from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
 
 def is_float(value):
@@ -20,9 +20,9 @@ y = dataset['target']
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=.25)
 
-knn_classifier = KNeighborsClassifier()
+logistic_reg = LogisticRegression()
 
-model = knn_classifier.fit(X_train, y_train)
+model = logistic_reg.fit(X_train, y_train)
 
 data = sys.argv[1]
 
