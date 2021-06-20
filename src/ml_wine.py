@@ -20,7 +20,7 @@ y = dataset['target']
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=.25)
 
-logistic_reg = LogisticRegression()
+logistic_reg = LogisticRegression(max_iter=1000)
 
 model = logistic_reg.fit(X_train, y_train)
 
