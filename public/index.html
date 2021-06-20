@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnóstico de doença cardíaca</title>
+    <link rel='icon' type='image/x-icon' href='resources/icons/favicon.ico' />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+</head>
+
+<body style="padding-top: 20px;">
+    <div class="container-md">
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1"><i class="bi-info-circle-fill cursor-pointer" rel="tooltip"
+                    title="Em anos"></i></span>
+            <input id="age" type="number" class="form-control" placeholder="Idade" aria-label="Idade"
+                aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1"><i class="bi-info-circle-fill cursor-pointer" rel="tooltip"
+                    title="Sexo"></i></span>
+            <select id="sex" class="form-select" aria-label="Sexo">
+                <option value="1">Masculino</option>
+                <option value="2">Feminino</option>
+            </select>
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1"><i class="bi-info-circle-fill cursor-pointer" rel="tooltip"
+                    title="Tipo de dor no peito"></i></span>
+            <select id="cp" class="form-select" aria-label="Tipo de dor no peito">
+                <option value="1">Angina típica</option>
+                <option value="2">Angina atípica</option>
+                <option value="3">Dor não anginosa</option>
+                <option value="4">Assintomático</option>
+            </select>
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1"><i class="bi-info-circle-fill cursor-pointer" rel="tooltip"
+                    title="Em mm Hg na admissão ao hospital"></i></span>
+            <input id="trestbps" type="number" class="form-control" placeholder="Pressão arterial em repouso"
+                aria-label="Pressão arterial em repouso" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1"><i class="bi-info-circle-fill cursor-pointer" rel="tooltip"
+                    title="Em mg / dl"></i></span>
+            <input id="chol" type="number" class="form-control" placeholder="Colesterol sérico" aria-label="Colesterol sérico"
+                aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1"><i class="bi-info-circle-fill cursor-pointer" rel="tooltip"
+                    title="resultados eletrocardiográficos em repouso"></i></span>
+            <select id="restecg" class="form-select" aria-label="resultados eletrocardiográficos em repouso">
+                <option value="0">Normal</option>
+                <option value="1">Tendo anormalidade da onda ST-T (inversões da onda T e / ou elevação ou depressão ST>
+                    0,05 mV)</option>
+                <option value="2">Mostrando hipertrofia ventricular esquerda provável ou definitiva pelos critérios de
+                    Estes</option>
+            </select>
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1"><i class="bi-info-circle-fill cursor-pointer" rel="tooltip"
+                    title="frequência cardíaca máxima alcançada"></i></span>
+            <input id="thalach" type="number" class="form-control" placeholder="frequência cardíaca máxima alcançada"
+                aria-label="frequência cardíaca máxima alcançada" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1"><i class="bi-info-circle-fill cursor-pointer" rel="tooltip"
+                    title="Depressão de ST induzida por exercício em relação ao repouso"></i></span>
+            <input id="oldpeak" type="number" step="any" class="form-control"
+                placeholder="Depressão de ST induzida por exercício em relação ao repouso"
+                aria-label="Depressão de ST induzida por exercício em relação ao repouso"
+                aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1"><i class="bi-info-circle-fill cursor-pointer" rel="tooltip"
+                    title="Inclinação do segmento ST de pico do exercício"></i></span>
+            <select id="slope" class="form-select" aria-label="Inclinação do segmento ST de pico do exercício">
+                <option value="1">Inclinação ascendente</option>
+                <option value="2">Plano</option>
+                <option value="3">declive</option>
+            </select>
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1"><i class="bi-info-circle-fill cursor-pointer" rel="tooltip"
+                    title="De 0 a 3"></i></span>
+            <input id="ca" type="number" class="form-control" placeholder="Número de vasos principais coloridos por fluorosopia"
+                aria-label="Número de vasos principais coloridos por fluorosopia" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1"><i class="bi-info-circle-fill cursor-pointer" rel="tooltip"
+                    title="Talassemia"></i></span>
+            <select id="thal" class="form-select" aria-label="Talassemia">
+                <option value="1">Normal</option>
+                <option value="2">Defeito corrigido</option>
+                <option value="3">Defeito reversível</option>
+            </select>
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1"><i class="bi-info-circle-fill cursor-pointer" rel="tooltip"
+                    title="> 120 mg / dl"></i></span>
+            <div class="form-check" style="margin: 10px 0px 0px 10px">
+                <input id="fbs" class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <label class="form-check-label" for="flexCheckChecked">
+                    Açúcar no sangue em jejum
+                </label>
+            </div>
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1"><i class="bi-info-circle-fill cursor-pointer" rel="tooltip"
+                    title="> 120 mg / dl"></i></span>
+            <div class="form-check" style="margin: 10px 0px 0px 10px">
+                <input id="exange" class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <label class="form-check-label" for="flexCheckChecked">
+                    Angina induzida por exercício
+                </label>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalDiag" onclick="onClickRealizarDiagnostico()">Realizar
+            diagnóstico</button>
+
+        <div class="modal fade" id="modalDiag" tabindex="-1" aria-labelledby="modalDiagLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalDiagLabel">Resultado do diagnóstico</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="d-flex justify-content-center">
+                            <div class="spinner-border" role="status">
+                                <span class="sr-only"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Finalizar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/app.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("[rel=tooltip]").tooltip({ placement: 'top' });
+        });
+    </script>
+</body>
+
+</html>
