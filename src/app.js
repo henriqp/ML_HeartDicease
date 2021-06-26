@@ -14,7 +14,7 @@ app.get('/', function (req, res) {
 app.post('/predict', function (req, res) {
     function runScript() {
         return spawn('python', [
-            path.join(__dirname, 'ml_wine.py'),
+            path.join(__dirname, 'script.py'),
             req.body
         ]);
     }

@@ -1,5 +1,8 @@
 body {
-    padding: '20px 10px 10px 10px'
+    background-color: aliceblue !important;
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 
 .cursor-pointer {
