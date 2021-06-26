@@ -1,8 +1,8 @@
-#PROJETO INTELIGENCIA ARTIFICIAL - FACULDADE SATC
+# PROJETO INTELIGENCIA ARTIFICIAL - FACULDADE SATC
 
-##Executar
+## Executar
 
-###Na pasta do projeto
+### Na pasta do projeto
 ```npm install```
 ```pip install -r requirements.txt```
 ```node src/app.js```
