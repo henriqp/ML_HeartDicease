@@ -1,5 +1,10 @@
 # PROJETO INTELIGENCIA ARTIFICIAL - FACULDADE SATC
 
+## Pré-requisitos
+
+* Node
+* Python
+
 ## Executar
 
 ### Na pasta do projeto
